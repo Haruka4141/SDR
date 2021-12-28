@@ -32,6 +32,7 @@ def compact_sensor_ID(sdr):
     return ID
 
 # analog reading should be converted by SDR factors
+# discrete sensor: get 2 bytes status
 def sensor_reading(IP, sdr):
     response = raw_command(IP, "0x4 0x2d 0x" + sdr[9])
 
